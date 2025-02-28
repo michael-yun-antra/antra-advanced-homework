@@ -1,0 +1,5 @@
+<div class="job-card">
+    <h3><a href="{{ job?.url }}" target="_blank">{{ job?.title }}</a></h3>
+    <p>By {{ job?.by}} • {{ job.time * 1000 | date }} </p>
+    <button (click) ="removeInterestedJob(job)"> Delete </button>
+</div>

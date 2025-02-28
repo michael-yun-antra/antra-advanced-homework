@@ -36,6 +36,10 @@ export class AppComponent implements OnInit {
     return this.currentPage * 6 < this.ids.length - 1;
   }
 
+  addToInterested(job: any): void {
+    this.dataService.addInterestedJob(job);
+  }
+
   ngOnInit(): void {
     this.dataService.getIds().pipe(
       switchMap((ids: number[]) => {

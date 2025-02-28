@@ -1,0 +1,11 @@
+<main>
+    <head>
+        <h1>Interested Jobs</h1>
+    </head>
+
+    <body *ngIf="'data.length > 0'">
+        <ng-container *ngFor="let job of interestedJobs$ | async">
+          <app-interested-job-card [job] = "job"></app-interested-job-card>
+        </ng-container>
+    </body>
+</main>

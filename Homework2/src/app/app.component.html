@@ -1,17 +1,24 @@
-<main>
-  <head>
-    <h1> Hacker News Job Board </h1>
-  </head>
+<div class = "splitView">
+  <div class = "left">
+    <main>
+      <head>
+        <h1> Hacker News Job Board </h1>
+      </head>
 
-  <body *ngIf="'data.length > 0'">
+      <body *ngIf="'data.length > 0'">
+        <ng-container *ngFor="let job of jobDetails">
+          <app-job-card [job] = "job"></app-job-card>
+        </ng-container>
+      </body>
 
-    <ng-container *ngFor="let job of jobDetails">
-      <app-job-card [job] = "job"></app-job-card>
-    </ng-container>
-  </body>
+      <!-- <button (click) = "check()">Checker</button> -->
+      <button *ngIf="hasMoreJobs()" (click) = "updateJobs()"> Load more jobs</button>
 
-  <!-- <button (click) = "check()">Checker</button> -->
-   <button *ngIf="hasMoreJobs()" (click) = "updateJobs()"> Load more jobs</button>
-
-</main>
+    </main>
+  </div>
+  <div class="right">
+    <app-interested-job-board></app-interested-job-board>
+  </div>
+  
+</div>
 <router-outlet />

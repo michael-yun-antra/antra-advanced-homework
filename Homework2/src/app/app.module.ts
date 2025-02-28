@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './services/data.service';
 import { JobCardComponent } from './components/job-card/job-card.component';
+import { InterestedJobBoardComponent } from './components/interested-job-board/interested-job-board.component';
+import { InterestedJobCardComponent } from './components/interested-job-board/interested-job-card/interested-job-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JobCardComponent
+    JobCardComponent,
+    InterestedJobBoardComponent,
+    InterestedJobCardComponent
   ],
   imports: [
     HttpClientModule,
