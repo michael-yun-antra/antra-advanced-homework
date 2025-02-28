@@ -1,0 +1,17 @@
+<main>
+  <head>
+    <h1> Hacker News Job Board </h1>
+  </head>
+
+  <body *ngIf="'data.length > 0'">
+
+    <ng-container *ngFor="let job of jobDetails">
+      <app-job-card [job] = "job"></app-job-card>
+    </ng-container>
+  </body>
+
+  <!-- <button (click) = "check()">Checker</button> -->
+   <button *ngIf="hasMoreJobs()" (click) = "updateJobs()"> Load more jobs</button>
+
+</main>
+<router-outlet />
