@@ -1,0 +1,19 @@
+<form [formGroup]="validatorForm">
+    <div class="form-container">
+      <h2>Validator Demo</h2>
+  
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" formControlName="password"/>
+      </div>
+  
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm password" formControlName="confirmPassword"/>
+      </div>
+  
+      <p *ngIf="passwordMismatch" [ngStyle]="{'color':'red'}">Passwords do not match</p>
+      <button type="submit" [disabled]="passwordMismatch">Submit</button>
+    </div>
+  </form>
+  
