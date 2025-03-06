@@ -1,0 +1,9 @@
+<div class="card">
+    <img [src] = "user.avatar" class="user-avatar" />
+    <div class = "user-info">
+        <h2> {{ user.first_name}} {{user.last_name}} </h2>
+        <p>
+            <a [href]="'mailto:' + user.email" target="_self">{{ user.email }}</a>
+        </p>
+    </div>
+</div>

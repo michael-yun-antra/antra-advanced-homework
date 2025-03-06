@@ -1,0 +1,43 @@
+$dark-red: rgb(195, 19, 19);
+
+.app-name {
+  font-weight: 900;
+}
+
+.navbar-wrapper {
+  background-color: $dark-red;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  height: 4em;
+  justify-content: space-between;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80%;
+}
+
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-tab {
+  padding: 0 20px; 
+  height: 100%; 
+  display: flex;
+  align-items: center;
+  background-color: $dark-red;
+  color: lightgray;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: lighten($dark-red, 10%);
+  }
+}

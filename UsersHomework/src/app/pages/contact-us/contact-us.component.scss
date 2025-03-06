@@ -1,0 +1,53 @@
+
+
+.contact-container {
+    width: 100%;
+    background: white;
+    font-family:Arial, Helvetica, sans-serif;
+    button {
+        width: 20%;
+        padding: 10px;
+        border: none;
+        background-color: rgb(195, 19, 19);
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .error {
+        color: red;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-weight: 900;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    label {
+      display: block;
+    }
+
+    .success-message {
+        color: rgb(21, 155, 21);
+    }
+    
+    .success-fields {
+        display: inline-block;
+    }
+  }
+  
