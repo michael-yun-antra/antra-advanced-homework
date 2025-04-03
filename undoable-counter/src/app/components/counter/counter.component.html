@@ -22,10 +22,12 @@
 
     <div>
         <h3>History</h3>
-        <ul>
-            <li *ngFor="let entry of displayedHistory">
-                {{ entry.action }} ({{ entry.before }} -> {{ entry.after }})
-            </li>
-        </ul>
+        <div class="history">
+            <ul>
+                <li *ngFor="let entry of displayedHistory">
+                    {{ entry.action }} ({{ entry.before }} -> {{ entry.after }})
+                </li>
+            </ul>
+        </div>
     </div>
 </main>
