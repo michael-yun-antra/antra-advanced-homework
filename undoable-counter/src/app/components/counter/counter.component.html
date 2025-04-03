@@ -1,0 +1,31 @@
+<main>
+    <h1>Undoable Counter</h1>
+
+    <div>
+        <button (click)="undo()" [disabled]="!canUndo">Undo</button>
+        <button (click)="redo()" [disabled]="!canRedo">Redo</button>
+    </div>
+
+    <div>
+        <button (click)="adjustCount(-100)">-100</button>
+        <button (click)="adjustCount(-10)">-10</button>
+        <button (click)="adjustCount(-1)">-1</button>
+
+        {{ count }}
+
+        <button (click)="adjustCount(1)">+1</button>
+        <button (click)="adjustCount(10)">+10</button>
+        <button (click)="adjustCount(100)">+100</button>
+    </div>
+
+
+
+    <div>
+        <h3>History</h3>
+        <ul>
+            <li *ngFor="let entry of displayedHistory">
+                {{ entry.action }} ({{ entry.before }} -> {{ entry.after }})
+            </li>
+        </ul>
+    </div>
+</main>
