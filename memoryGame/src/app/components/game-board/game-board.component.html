@@ -1,0 +1,14 @@
+<main>
+    <div class="game-board">
+        <ng-container *ngFor="let x of gameState; let i = index">
+            <div class="game-card" [ngClass]="x.matched ? 'face-up' : 'face-down'" (click) = "flipCard(i)">
+                <ng-container *ngIf="x.faceUp">
+                    {{x.emoji}}
+                </ng-container>
+            </div>    
+        </ng-container>
+    </div>
+    <div *ngIf="isGameComplete()" class = "menu">
+        <button (click) = "resetBoard()">Play Again</button>
+    </div>
+</main>
