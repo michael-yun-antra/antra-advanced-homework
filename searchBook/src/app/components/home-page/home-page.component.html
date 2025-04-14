@@ -1,0 +1,24 @@
+<main>
+    <!-- <button> Go to Wish List </button> -->
+    <div class = "search-section">
+        <input [formControl]="inputField" placeholder="Search Books" />
+        <div *ngIf="books | async as books">
+            <div *ngFor="let book of books.items">
+                <div (click) = "addToWishlist(book.volumeInfo.title)" class="card">
+                    <strong> {{ book.volumeInfo.title }} </strong>
+                    <img src="{{book.volumeInfo.imageLinks.thumbnail}}" />
+                    <p *ngIf="book.volumeInfo.publisher">Publisher: {{ book.volumeInfo.publisher }} </p>
+                    <p *ngIf="book.volumeInfo.publishedDate">Publication Date: {{ book.volumeInfo.publishedDate }} </p>
+                    <p> {{ book.volumeInfo.description }} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "wishlist-section"> 
+        <strong> My Reading Wishlist</strong>
+        <ng-container *ngFor="let bookTitle of wishlist">
+            <ul> {{ bookTitle }} <button (click) = "deleteFromWishlist(bookTitle)"> Remove </button></ul>
+        </ng-container>
+    </div>
+</main>
