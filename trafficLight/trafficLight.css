@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.traffic-light {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: black;
+    padding: 20px;
+}
+
+.light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: gray;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.red {
+    animation-name: redCycle;
+    animation-duration: 10s;
+}
+
+.yellow {
+    animation-name: yellowCycle;
+    animation-duration: 10s;
+}
+
+.green {
+    animation-name: greenCycle;
+    animation-duration: 10s;
+}
+
+@keyframes redCycle {
+    /* Red for 4 seconds */
+    0%, 39.99% { background-color: red; } 
+    40%, 100%  { background-color: grey; }
+}
+
+@keyframes greenCycle {
+    /* Green for 4 seconds */
+    40%, 79.99% { background-color: green; }
+    80%, 100%   { background-color: grey; }
+    0%, 39.99%  { background-color: grey; }
+}
+
+@keyframes yellowCycle {
+    /* Yellow for 2 seconds */
+    80%, 99.99% { background-color: yellow; }
+    0%, 79.99%, 100% { background-color: grey; }
+}
